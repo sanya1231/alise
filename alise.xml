@@ -17,7 +17,8 @@
         </input>
       </context>
     </input>
-<input pattern="* погода*">
+ 
+ <input pattern="* погода*">
          <get url="http://api.openweathermap.org/data/2.5/weather" var="Weather">
     <param name="APPID" value="API_KEY"/>
     <param name="units" value="metric"/>
@@ -27,5 +28,5 @@
 
   <output value='get("temp", get("main", $Weather))'/>
 
-
+ </input>
 </context>
