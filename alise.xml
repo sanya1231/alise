@@ -21,6 +21,7 @@
  <input pattern="* gg [$Date] *">
          <get url="api.openweathermap.org/data/2.5/weather" var="Weather">
     <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
+       <param name="ID" value="2172797"/>
   </get>
 
   <output value='get("temp", get("main", $Weather))'/>
