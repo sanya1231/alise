@@ -1,5 +1,21 @@
 <context>
-  <input pattern="* привет* *">
-    <output value="Привет, как тебя зовут?"/>
-  </input>
+  <input pattern="* (привет*|здравствуй*) *">
+    <output value="Привет $UserName!" if="full($UserName)"/>
+    
+    <context if="empty($UserName)">
+      <output value="Здравствуй, давай знакомиться!Как тебя зовут?"/>
+        <input pattern="$Text">
+          
+          <var name="UserName" value="cap($Text)" scope="user"/>
+          <output value="Приятно познакомиться, $UserName!Что-то хотел узнать у меня?"/>
+        </input>
+      </context>
+    </input>
 </context>
+<context>
+   <input pattern="*ищу (работу|подработку)*">
+    <output value="Хммм какая должность интересует$UserName?" if="full($UserName)"/>
+      <input pattern="*ищу (работу|подработку)*">
+        <output value="Давай вначале познакомимся" if="empty($UserName)"/>
+     
+</context
