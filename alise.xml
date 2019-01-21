@@ -18,8 +18,8 @@
       </context>
     </input>
  
- <input pattern="* погода*">
-         <get url="http://api.openweathermap.org/data/2.5/weather" var="Weather">
+ <input pattern="* погода* в $pog">
+         <get url="api.openweathermap.org/data/2.5/weather?q=$pog&APPID=ffb63727190e500e4ef133e1bbe773ec" var="Weather">
     <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
     <param name="units" value="metric"/>
     <param name="lat" value="$UserLatitude"/>
