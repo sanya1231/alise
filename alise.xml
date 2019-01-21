@@ -19,9 +19,10 @@
     </input>
  
  <input pattern="* (погода|погоду) в [$geo] [$Date] *">
-         <get url="https://api.openweathermap.org/data/2.5/weather" var="Weather">
-    <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
+       <get url="https://api.openweathermap.org/data/2.5/weather" var="Weather">
+       <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
        <param name="q" value="$geo"/>
+       <var name="geo" value="cap($geo)" scope="geo"/>
   </get>
 
   <output value='get("temp", get("main", $Weather))'/>
