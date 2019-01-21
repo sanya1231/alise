@@ -18,7 +18,7 @@
       </context>
     </input>
  
- <input pattern="* gg [$pogoda] *">
+ <input pattern="* gg [$Date] *">
          <get url="api.openweathermap.org/data/2.5/weather" var="Weather">
     <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
   </get>
