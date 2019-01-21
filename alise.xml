@@ -6,7 +6,7 @@
                 <param name="APPID" value="ffb63727190e500e4ef133e1bbe773ec"/>
                 <param name="q" value="$geop"/>
              </get>
-					<output value='get("temp/maim/weather/$description")'/>
+					<output value='get("temp/main/weather/$description")'/>
 			</input>
      
 </context>
