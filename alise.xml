@@ -11,7 +11,7 @@
         </input>
       </context>
     </input>
-  
+ <context if="full($UserName)">
    <input pattern="*ищу (работу|подработку)*">
     <output value="Хммм какая должность интересует$UserName?" if="full($UserName)"/>
       <input pattern="*ищу (работу|подработку)*">
