@@ -1,5 +1,5 @@
 <context>
-      <input pattern="Здравствуй,в каком городе погоду?"/>
+      <output pattern="Здравствуй,в каком городе погоду?"/>
          <input pattern="$Text">
            <var name="geop" value="cap($Text)" scope="geog"/>
                 <get url="https://api.openweathermap.org/data/2.5/weather" var="Weather">
@@ -8,6 +8,5 @@
              </get>
 					<output value='get("temp", get("main", $Weather))'/>
 			</input>
-		</input>
      
 </context>
