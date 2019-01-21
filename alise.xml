@@ -1,5 +1,5 @@
 <context>
   <input pattern="* привет* *">
-    <output value="Ну првиет"/>
+    <output value="Привет, как тебя зовут?"/>
   </input>
 </context>
