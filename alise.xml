@@ -29,5 +29,7 @@
 
   <output value='get("temp", get("main", $Weather))'/>
    </input>
+  </context>
  </input>
+     
 </context>
