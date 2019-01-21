@@ -1,8 +1,14 @@
 <context>
-  <input pattern="* (привет*|здравствуй*) *">
+
+    <sample>
+        <item value="Кто такая Алиса"/>
+        <item value="Что такое бот"/>
+    </sample>
+
+ <input pattern="* (привет*|здравствуй*) *">
     <output value="Привет $UserName!" if="full($UserName)"/>
     
-    <context if="empty($UserName)">
+    <context if="empty($UserName)" id="name">
       <output value="Здравствуй, давай знакомиться!Как тебя зовут?"/>
         <input pattern="$Text">
           
@@ -11,10 +17,10 @@
         </input>
       </context>
     </input>
- <context if="full($UserName)">
-   <input pattern="*ищу (работу|подработку)*">
-    <output value="Хммм какая должность интересует$UserName?" if="full($UserName)"/>
-      <input pattern="*ищу (работу|подработку)*">
-        <output value="Давай вначале познакомимся" if="empty($UserName)"/>
-     
-        </context>
+<input pattern="* погода|время *">
+        <output value="* weather * $Date" if="empty($UserName)"/>
+        <output value="* weather * $Date"/>
+    </input>
+
+
+</context>
