@@ -1,26 +1,23 @@
 <context>
-
-    <sample>
-        <item value="Кто такая Алиса"/>
-        <item value="Что такое бот"/>
-    </sample>
-
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя!"/>
             <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
         </output>
-
+        
         <context if="empty($UserName)" id="name">
             <output value="Привет! Меня зовут Алиса!  Как тебя зовут?"/>
-
-            <input pattern="* работу *">
-                <output value="Где проживаете?"/>
-            </input>
+            </context>
+        
+            <context>
+  <input pattern="* привет* *">
+    <output value="Ну првиет"/>
+  </input>
+            </context>
+            
         </context>
+        
     </input>
-    
-
     <input pattern="* пока *">
         <var name="end_session" value="javascript: true"/>
         <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
