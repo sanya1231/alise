@@ -11,11 +11,10 @@
         </input>
       </context>
     </input>
-</context>
-<context>
+  
    <input pattern="*ищу (работу|подработку)*">
     <output value="Хммм какая должность интересует$UserName?" if="full($UserName)"/>
       <input pattern="*ищу (работу|подработку)*">
         <output value="Давай вначале познакомимся" if="empty($UserName)"/>
      
-</context
+        </context>
